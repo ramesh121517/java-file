@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+</head>
+
+<body>
+  <h3>Q.1 What is JavaScript? </h3>
+  <p>JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia,
+    animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve
+    with a few lines of JavaScript code.)
+  </p>
+  <h3>What is the use of isNaN function? </h3>
+  <p>
+    The JavaScript isNaN() Function is used to check whether a given value is an illegal number or not. It returns
+    true if the value is a NaN else returns false. It is different from the Number.isNaN() Method.
+    -syntax isNaN( value )
+    Parameter Values: This method accepts a single parameter as mentioned above and described below:
+    value: It is a required value passed in the isNaN() function.
+    Return Value: It returns a Boolean value i.e. returns true if the value is NaN else returns false.
+  </p>
+
+  <h3>Q.2 What is negative Infinity?</h3>
+  <p>
+    The negative infinity in JavaScript is a constant value that is used to represent a value that is the lowest
+    available. This means that no other number is lesser than this value. It can be generated using a self-made
+    function or by an arithmetic operation.
+
+    <br>Negative infinity results in -0(different from 0 ) when divided by any other number.
+    <br>When divided by itself or positive infinity, negative infinity return NaN
+    <br>Negative infinity, when divided by any positive number (apart from positive infinity) is negative infinity.
+    <br>Negative infinity, divided by any negative number (apart from negative infinity) is positive infinity.
+    <br>If we multiply negative infinity with NaN, we will get NaN as a result.
+    <br>The product of 0 and negative infinity is Nan.
+    <br>The product of two negative infinities is always a positive infinity.
+    <br>The product of both positive and negative infinity is always negative infinity.
+  </p>
+  <h3>Q.3 Which company developed JavaScript? </h3>
+  <p>
+    Brendan Eich developed JavaScript, a computer language, in just ten days in May 1995. Initially called Mocha,
+    then LiveScript, it finally became known as JavaScript. It was designed for the client-side of websites to add
+    dynamic and interactive elements to static HTML pages.
+
+    <br>JavaScript was first implemented in Netscape Navigator, the most popular browser at the time. Microsoft
+    quickly
+    adopted it for Internet Explorer. Its ease of use and unique position as the only client-side scripting language
+    made JavaScript popular among web developers.
+
+    <br>Over the years, JavaScript popularity grew, and it was used to create a variety of web applications,
+    including
+    online games, dynamic menus, and form validation. A new version, ECMAScript 4, was planned in 2002 but was
+    abandoned due to disagreements among browser vendors.
+    Undeclared: It occurs when we try to access any variable that is not initialized or declared earlier using the
+    var or const keyword. If we use ‘typeof’ operator to get the value of an undeclared variable, we will face the
+    runtime error with the return value as “undefined”. The scope of the undeclared variables is always global.
+
+    <br>Today, JavaScript is one of the most popular programming languages, used by about 95% of websites. It is not
+    only crucial for web development but also for creating server-side applications, desktop and mobile apps, and
+    even programming robots and hardware.
+  </p>
+
+  <h3>Q.4 What are undeclared and undefined variables? </h3>
+  <p>Undefined: It occurs when a variable has been declared but has not been assigned any value. Undefined is not a
+    keyword.
+  </p>
+  <p>Undeclared: It occurs when we try to access any variable that is not initialized or declared earlier using the
+    var or const keyword. If we use type of operator to get the value of an undeclared variable, we will face the
+    runtime error with the return value as “undefined”. The scope of the undeclared variables is always global.
+  </p>
+  <h3>Q.5 Write the code for adding new elements dynamically? </h3>
+
+  <h3>What is the difference between ViewState and SessionState? </h3>
+  <h3>What is === operator? </h3>
+  <p>The strict equality operator (===) behaves identically to the abstract equality operator (==) except no type
+    conversion is done, and the types must be the same to be considered equal.
+
+  </p>
+  <h3>Q.6 How can the style/class of an element be changed? </h3>
+  <pre>
+    Changing style
+      1. Inline styles: Use the style property to change individual styles.
+      - element.style.property = value;
+      - Example: document.getElementById("example").style.color = "red";
+
+      2. CSS styles: Use the style.cssText property to change multiple styles at once.
+      - element.style.cssText = "property1: value1; property2: value2;";
+      - Example: document.getElementById("example").style.cssText = "color: red; font-size: 24px;";
+
+      Changing Classes:
+      1. Add a class: Use the classList.add() method.
+          - element.classList.add("className");
+          - Example: document.getElementById("example").classList.add("example-class");
+      2. Remove a class: Use the classList.remove() method.
+          - element.classList.remove("className");
+          - Example: document.getElementById("example").classList.remove("example-class");
+      3. Toggle a class: Use the classList.toggle() method.
+          - element.classList.toggle("className");
+          - Example: document.getElementById("example").classList.toggle("example-class");
+      4. Replace a class: Use the classList.replace() method (not supported in older browsers).
+          - element.classList.replace("oldClassName", "newClassName");
+          - Example: document.getElementById("example").classList.replace("old-class", "new-class");
+
+      Before changing styles or classes, you need to select the element(s) you want to modify. You can use:
+
+      1. document.getElementById("id") for a single element by ID.
+      2. document.getElementsByClassName("className") for multiple elements by class name.
+      3. document.querySelectorAll("selector") for multiple elements by CSS selector.
+
+      Remember to replace "example" and "className" with your actual element ID and class names.
+    </pre>
+  <h3>Q.7 How to read and write a file using JavaScript? </h3>
+  <pre>
+    Reading and writing files in JavaScript can be achieved using various methods, depending on the environment and requirements.
+    Here are some common approaches:
+
+    Client-side (Browser):
+    
+    1. FileReader and FileWriter APIs: For reading and writing files locally on the client-side, you can use the FileReader and FileWriter APIs.
+     However, these APIs have limited support and security restrictions.
+    
+    Server-side (Node.js):
+    
+    1. fs (File System) module: Node.js provides the built-in fs module for reading and writing files. You can use methods like:
+        - fs.readFile() and fs.writeFile() for asynchronous operations.
+        - fs.readFileSync() and fs.writeFileSync() for synchronous operations.
+    2. fs.promises: Node.js 14+ introduces fs.promises, allowing you to use async/await syntax for file operations.
+    3. Streams: You can use Node.js streams to read and write files in a more efficient and scalable way.
+   </pre>
+
+  <h3>Q.8 What are all the looping structures in JavaScript? </h3>
+  <pre>
+        1. for loop: Allows you to run a block of code for a specified number of iterations.
+
+        for (var i = 0; i < 10; i++) {
+          console.log(i);
+        }
+        
+        2. while loop: Runs a block of code as long as a specified condition is true.
+        
+        var i = 0;
+        while (i < 10) {
+          console.log(i);
+          i++;
+        }
+        
+        3. do-while loop: Similar to the while loop, but the code block is executed at least once before the condition is checked.
+        
+        var i = 0;
+        do {
+          console.log(i);
+          i++;
+        } while (i < 10);
+
+        4. forEach loop (used with arrays): Executes a function for each element in an array.
+        
+        [1, 2, 3, 4, 5].forEach(function(element) {
+          console.log(element);
+        });
+        
+        5. for...in loop (used with objects): Iterates over the properties of an object.
+        
+        var obj = {a: 1, b: 2, c: 3};
+        for (var prop in obj) {
+          console.log(obj[prop]);
+        }
+        
+        6. for...of loop (used with iterable objects like arrays, strings, etc.): Similar to foreach, but allows for more flexibility.
+        
+        for (var element of [1, 2, 3, 4, 5]) {
+          console.log(element);
+        }
+        
+    <pre>
+    <h3>Q.9 How can you convert the string of any base to an integer in JavaScript? </h3>
+    <pre>
+      In JavaScript, you can convert a string of any base to an integer using the built-in parseInt() function.
+      The parseInt() function takes two arguments:
+
+      1. The string to be converted
+      2. The base of the number in the string (optional, defaults to 10)
+      
+      Here's the syntax:
+      
+      parseInt(string, base)
+      
+      For example:
+      parseInt('1010', 2) // Output: 10
+      
+    </pre>
+  <h3>Q.10 What is the function of the delete operator? </h3>
+  <pre>
+    The delete operator in JavaScript is used to remove a property from an object, or to remove a element from an
+    array.
+  
+    In JavaScript, the delete operator is used to:
+      
+    1. Remove a property from an object: It deletes a property and its value from an object.
+    2. Remove an element from an array: It removes an element from an array, leaving a hole (undefined) in its place.
+      
+    Syntax:
+      
+    delete object.property
+    delete array[index]
+      
+    Examples:
+      
+    1. Delete object property:
+      
+    const person = { name: 'John', age: 30 };
+    delete person.age;
+    console.log(person); // Output: { name: 'John' }
+      
+    1. Delete array element:
+      
+    const arr = [1, 2, 3, 4, 5];
+    delete arr[2];
+    console.log(arr); // Output: [1, 2, undefined, 4, 5]
+      
+  </pre>
+  <h3>Q.11 What are all the types of Pop up boxes available in JavaScript? </h3>
+  <pre>
+    detailed list of popup boxes available in JavaScript:
+
+    1. Alert Box: Displays a message with an "OK" button.
+        - Syntax: alert(message)
+    2. Confirm Box: Displays a message with "OK" and "Cancel" buttons.
+        - Syntax: confirm(message)
+        - Returns true if the user clicks "OK" and false if they click "Cancel".
+    3. Prompt Box: Displays a message with an input field and "OK" and "Cancel" buttons.
+        - Syntax: prompt(message, defaultvalue)
+        - Returns the user's input as a string, or null if they click "Cancel".
+    4. Dialog Box (HTML5): A customizable popup box that can contain HTML content.
+        - Syntax: <dialog>...</dialog> (HTML) and dialog.showModal() (JavaScript)
+    5. Toast Notification (HTML5): A small, temporary popup box that appears at the bottom of the screen.
+        - Syntax: navigator.notifications.createNotification(title, options)
+    6. Modal Window: A customizable popup box that can contain HTML content and is often used for more complex interactions.
+        - Syntax: Various libraries and frameworks provide modal window functionality, such as Bootstrap Modal or jQuery UI Dialog.
+    7. Popup Window: A new browser window that can be used to display content.
+        - Syntax: window.open(url, name, features)
+    8. Tooltip: A small popup box that appears when a user hovers over an element.
+        - Syntax: Various libraries and frameworks provide tooltip functionality, such as Bootstrap Tooltip or jQuery UI Tooltip.    
+  </pre>
+  <h3>Q.12 What is the use of Void (0)? </h3>
+  <pre>
+    void(0) is a JavaScript expression that evaluates to undefined. It's often used in various contexts, including:
+
+    1. Hyperlink placeholder: In HTML, href="javascript:void(0)" is used as a placeholder for hyperlinks that don't need to navigate to a URL.
+    2. Event handling: return void(0) or return false is used to prevent default browser behavior, such as preventing a form submission or link navigation.
+    3. Bookmarklets: void(0) is used to create bookmarklets, which are small JavaScript scripts that can be saved as bookmarks.
+    4. Code optimization: In some cases, void(0) can be used to optimize code by avoiding unnecessary computations or return values.
+    5. IE compatibility: In older versions of Internet Explorer, void(0) was used to fix issues with the href attribute.
+    
+    Using void(0) has some advantages, such as:
+    
+    - It's a short and concise way to represent an undefined value.
+    - It can help prevent errors by avoiding unnecessary computations or return values.
+    - It's compatible with most browsers and versions.    
+  </pre>
+
+  <h3>Q.13 How can a page be forced to load another page in JavaScript? </h3>
+  <pre>
+    There are several ways to force a page to load another page in JavaScript:
+
+    1. window.location: Set the window.location property to the URL of the new page.
+    
+    window.location = '(link unavailable)';
+    
+    1. window.location.href: Set the window.location.href property to the URL of the new page.
+    
+    window.location.href = '(link unavailable)';
+    
+    1. window.location.replace(): Use the window.location.replace() method to replace the current page with a new one.
+    
+    window.location.replace('(link unavailable)');
+    
+    1. window.location.assign(): Use the window.location.assign() method to load a new page.
+    
+    window.location.assign('(link unavailable)');
+    
+    1. window.open(): Use the window.open() method to open a new page in the current window or a new tab.
+    
+    window.open('(link unavailable)', '_self'); // Current window
+    window.open('(link unavailable)', '_blank'); // New tab
+
+    Also, be aware of the differences between these methods:
+
+    - replace() and assign() will replace the current page's history entry, while href and open() will create a new history entry.
+    - _self will load the new page in the current window, while _blank will load it in a new tab.
+  </pre>
+
+  <h3>Q.14 What are the disadvantages of using innerHTML in JavaScript? </h3>
+  <pre>Using innerHTML in JavaScript has several disadvantages:
+
+    1. Security risks: innerHTML can introduce cross-site scripting (XSS) vulnerabilities if user-generated content is not properly sanitized.
+    2. Performance issues: Frequent updates to innerHTML can cause the browser to re-render the entire page, leading to performance issues.
+    3. Loss of references: When updating innerHTML, all existing references to child elements are lost, which can cause issues with event listeners and other attached data.
+    4. Removal of event listeners: innerHTML removes all event listeners attached to child elements, requiring re-attachment after updating.
+    5. Inability to append content: innerHTML replaces the entire content, making it difficult to append new content without overwriting existing content.
+    6. Browser inconsistencies: innerHTML may behave differently across browsers, leading to compatibility issues.
+    7. No support for SVG or XML: innerHTML only works with HTML content, not SVG or XML.
+    8. Difficult debugging: Errors in innerHTML content can be challenging to debug due to the lack of clear error messages.
+    
+    To avoid these disadvantages, consider using alternative methods like:
+    
+    - createElement and appendChild for adding new elements
+    - textContent or innerText for updating text content
+    - insertAdjacentHTML for inserting HTML content without replacing existing content
+    - Template literals or DOM parsing libraries for safer and more efficient HTML manipulation.</pre>
+
+</body>
+
+</html>
